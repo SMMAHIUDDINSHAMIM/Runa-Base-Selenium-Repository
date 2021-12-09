@@ -31,8 +31,6 @@ public class loginPageData {
     public class Address {
 
         public Home home;
-        public Mailing mailing;
-        public Work work;
 
     }
  

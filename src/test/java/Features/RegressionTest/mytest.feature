@@ -13,8 +13,8 @@ Scenario Outline: Login test - positive scenario
         Then I validate user login is successful "<successfulMsg>"
         
     Examples:
-        | url                                           |    username                   |   password     |  successfulMsg   |
-        | https://accounts.saucelabs.com/am/XUI/#login/ |    mahiuddins27@gmail.com     |   Testing@12   |  Log out         |
+        | url                                           |    username        |   password     |  successfulMsg   |
+        | https://accounts.saucelabs.com/am/XUI/#login/ |                    |                |  Log out         |
 
 
 # @em
