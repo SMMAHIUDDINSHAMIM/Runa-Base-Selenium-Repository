@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>SeleniumCucumberJVM</groupId>
+    <artifactId>SeleniumCucumberJVM</artifactId>
+    <version>1.0-SNAPSHOT</version>    
+    
+
+    <properties>
+        <aspectj.version>1.8.13</aspectj.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>   
+        <name>${project.name}</name> 
+        <ApplicationEnv>TEST</ApplicationEnv>         
+    </properties>
+  
+    <repositories>
+        <repository>
+            <id>Maven-Artifacts</id>
+            <url>https://pkgs.dev.azure.com/rumim/MavenVSCode/_packaging/Maven-Artifacts/maven/v1</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>Maven-Artifacts</id>
+            <url>https://pkgs.dev.azure.com/rumim/MavenVSCode/_packaging/Maven-Artifacts/maven/v1</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </distributionManagement>   
+    <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+  
+        <dependency>
+            <groupId>ru.yandex.qatools.ashot</groupId>
+            <artifactId>ashot</artifactId>
+            <version>1.5.4</version>
+        </dependency>
+
+        <!--dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.12.0</version>
+        </dependency>-->
+
+        <!--dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>-->
+
+        <dependency>
+            <groupId>com.relevantcodes</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>2.41.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.4.2</version>
+            <!--scope>test</scope>-->
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.4.2</version>
+            <!--scope>test</scope>-->
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.asprise.ocr/java-ocr-api -->
+        <dependency>
+            <groupId>com.asprise.ocr</groupId>
+            <artifactId>java-ocr-api</artifactId>
+            <version>15.3.0.3</version>
+        </dependency>
+       
+
+        <!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
+        <!--dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>javax.mail-api</artifactId>
+            <version>1.6.2</version>
+        </dependency>-->
+        <!--dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-report-plugin</artifactId>
+            <version>3.0.0-M5</version>
+            <type>maven-plugin</type>
+        </dependency>-->
+<!-- ################################################ Sauce Lab dependencies ################################################ -->          
+        <dependency>
+            <groupId>com.saucelabs</groupId>
+            <artifactId>sauce_bindings</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.1</version>
+        </dependency>
+<!-- ################################################ Sauce Lab dependencies ################################################ -->   
+<!-- ################################################ Cucumber/gherkin dependencies ################################################ -->
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+        
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.14.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>5.7.0</version>
+        </dependency>
+
+
+         <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>5.7.0</version>
+            <scope>test</scope>
+        </dependency> 
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>5.7.0</version>
+            <!--scope>test</scope>-->
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>5.7.0</version>
+          </dependency> 
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>5.7.0</version>
+            <!--scope>test</scope>-->
+        </dependency>      
+
+          
+
+
+
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java8 
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java8</artifactId>
+            <version>6.10.2</version>
+        </dependency>-->
+
+<!-- ################################################ Cucumber/gherkin dependencies ################################################ -->          
+    </dependencies>
+
+    <build>
+       
+
+
+        
+
+      
+        <plugins>
+
+             <!-- read pom properties-->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId> 
+                <artifactId>properties-maven-plugin</artifactId> 
+                <version>1.0.0</version> 
+                <executions> 
+                    <execution> 
+                        <phase>generate-resources</phase> 
+                        <goals> 
+                            <goal>write-project-properties</goal> 
+                        </goals> 
+                        <configuration> 
+                            <outputFile>${project.build.outputDirectory}/properties-from-pom.properties</outputFile> 
+                        </configuration> 
+                    </execution> 
+                </executions> 
+            </plugin>
+
+
+
+
+
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <!--version>3.8.1</version>-->
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>                
+                <version>2.20</version>
+                <configuration>
+<!-- ################################################ Cucumber/gherkin configurations ################################################ -->
+                    <!--includes>
+                        <include>**/RunnerTest.java</include>
+                    </includes>
+                    <systemPropertyVariables>
+                        <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
+                        <allure.link.issue.pattern>https://example.org/browse/{}</allure.link.issue.pattern>
+                        <allure.link.tms.pattern>https://example.org/browse/{}</allure.link.tms.pattern>
+                    </systemPropertyVariables>-->
+<!-- ################################################ Cucumber/gherkin configurations ################################################ -->
+
+<!-- ################################################ uncomment suiteXmlFiles for non cucumber set up ################################################ -->
+                    <testFailureIgnore>false</testFailureIgnore>                    
+                    <suiteXmlFiles> 
+                        <suiteXmlFile>TestNG.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+</project>

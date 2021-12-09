@@ -1,0 +1,11 @@
+[
+    {
+        "dataType":"test",
+        "credentials": {
+            "id":"mySauce",
+            "password": "Abcd#1234",
+            "errorMessage": "User name/password combination is invalid."
+        }
+    }
+
+]
