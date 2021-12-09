@@ -2,11 +2,7 @@ package Steps;
 
 import java.io.IOException;
 
-import javax.swing.JOptionPane;
-
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import Util.*;
+import Util.BaseUtility;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
